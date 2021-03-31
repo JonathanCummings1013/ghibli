@@ -1,6 +1,7 @@
 class CLI
     def start
         puts "Welcome to Studio Ghibli movie finder! What is your name?"
+        API.get_data
         input = user_input
         greet(input)
     end
@@ -35,7 +36,8 @@ class CLI
         menu
     end
     def print_films
-       Movies.all.each.with_index(1) do |movie, index|
+        # binding.pry
+       Movies.all.each.with_index(1) do |films, index|
         puts "#{index}. #{films.title}"
        end
        select_films
@@ -44,7 +46,7 @@ class CLI
         puts "Enter name of movie you would like to learn more about please."
         selection = user_input #put in movie.rb for the string
         if Movies.find_by_selection(selection)
-        title = Movies.find_by_selection(selection)
+        films = Movies.find_by_selection(selection)
         else
             title = selection
         end

@@ -4,12 +4,10 @@ class Movies
    
     @@all = []
 
-    def initialize(title)
-        @title = title
-    
-        # films_hash.each do |key, value|
-        #     self.send("#{key}=", value) if self.respond_to?("#{key}=")
-        # end
+    def initialize(films_hash)
+        films_hash.each do |key, value| 
+         self.send("#{key}=", value) if self.respond_to?("#{key}=")
+        end
         save 
     end
 
@@ -20,9 +18,9 @@ class Movies
     def self.all
         @@all
     end
-    # # def self.find_by_selection(films_title)
-    # #     self.all.detect do |movie|
-    # #         films.title == films_title
-    # #     end
-    # end
+    def self.find_by_selection(films_title)
+        self.all.detect do |movie|
+            films.title == films_title
+        end
+    end
 end

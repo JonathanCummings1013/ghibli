@@ -5,11 +5,11 @@ class API
 
      films_list.each do |films|
 
-      Movies.new(films["title"])
+      Movies.new(films)
       # binding.pry
      end
    
-      binding.pry
+      # binding.pry
   end
   end
 
