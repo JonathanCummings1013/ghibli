@@ -61,7 +61,9 @@ EOF
         ...............▓...
                                                                                                                                  
 EOF
-        puts "Thank you for visiting us!"
+        puts "        Thank you for visiting us!"
+        puts "            come back soon"
+        puts "                 xoxo"
     end
     def invalid 
         puts "well...that doesn't seem to look right. Could you try again please? ^_^"
