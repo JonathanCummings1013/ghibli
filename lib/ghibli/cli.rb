@@ -8,7 +8,7 @@ class CLI
                                                 
                                                                                                                                    
 EOF
-        puts "Welcome to Studio Ghibli Movie Finder! What is a name i could call you?" 
+        puts "Welcome to Studio Ghibli Movie Finder! What is a name I could call you?" 
         API.get_data
         input = user_input
         greet(input)
@@ -66,7 +66,7 @@ EOF
     def invalid 
         puts "well...that doesn't seem to look right. Could you try again please? ^_^"
         puts ""
-        puts "Enter yes to see a list of movies otherwise enter exit to exit"
+        puts "enter yes to see more movie or exit to exit"
         menu
     end
     def print_films
@@ -103,7 +103,7 @@ EOF
         puts "-------------------------------------".colorize(:light_blue)
         puts ""
         puts ""
-        puts "enter y to see more movie or exit to exit"
+        puts "enter yes to see more movie or exit to exit"
         menu
         else 
             invalid
