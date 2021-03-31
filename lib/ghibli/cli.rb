@@ -1,6 +1,13 @@
-class CLI
+class CLI 
     def start
-        puts "Welcome to Studio Ghibli Movie Finder! What is a name i could call you?"
+        puts <<-'EOF'
+        __                     __               
+        (_ _|_      _| o  _    /__ |_  o |_  | o 
+        __) |_ |_| (_| | (_)   \_| | | | |_) | | 
+                                                
+                                                                                                                                   
+EOF
+        puts "Welcome to Studio Ghibli Movie Finder! What is a name i could call you?" 
         API.get_data
         input = user_input
         greet(input)
