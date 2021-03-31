@@ -18,13 +18,13 @@ EOF
     end
     def greet(name)
         puts ""
-        puts "Wow... #{name}, what a nice name! Would you like to see some of Studio Ghibli's movies today? If so, kindly Enter y to see a list of movies otherwise enter exit to exit"
+        puts "Wow... #{name}, what a nice name! Would you like to see some of Studio Ghibli's movies today? If so, kindly Enter yes to see a list of movies otherwise enter exit to exit"
         puts ""
         menu
     end
     def menu
         selection = user_input
-        if selection == "y"
+        if selection == "yes"
             puts ""
             print_films
         elsif selection == "exit"
@@ -34,14 +34,14 @@ EOF
             invalid
             # invaild message, let them keep chosing 
         end
-        #enter y print out thralls
+        #enter y print out movies
         #enter exit to exit
         #invaild message
     end
 
     def goodbye
         puts <<-'EOF'
-        
+
         ....▓▓▓▓
         ..▓▓......▓
         ..▓▓......▓▓..................▓▓▓▓
@@ -65,6 +65,8 @@ EOF
     end
     def invalid 
         puts "well...that doesn't seem to look right. Could you try again please? ^_^"
+        puts ""
+        puts "Enter yes to see a list of movies otherwise enter exit to exit"
         menu
     end
     def print_films
