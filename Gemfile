@@ -12,3 +12,4 @@ gem 'pry'
 gem 'rest-client'
 gem "require_all"
 gem "net-http"
+gem 'colorize', '~> 0.8.1'

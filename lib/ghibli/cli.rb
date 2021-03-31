@@ -1,6 +1,6 @@
 class CLI
     def start
-        puts "Welcome to Studio Ghibli movie finder! What is your name?"
+        puts "Welcome to Studio Ghibli Movie Finder! What is a name i could call you?"
         API.get_data
         input = user_input
         greet(input)
@@ -9,7 +9,7 @@ class CLI
         gets.strip
     end
     def greet(name)
-        puts "Gretings #{name} let's get started! Would like like to see some of Studio Ghibli's movies today? Enter y to see list, enter exit to exit"
+        puts "Wow... #{name}, what a nice name! Would you like to see some of Studio Ghibli's movies today? If so, kindly Enter y to see a list of movies otherwise enter exit to exit"
         menu
     end
     def menu
@@ -32,7 +32,7 @@ class CLI
         puts "Thank you for visiting us!"
     end
     def invalid 
-        puts "whoa...that doesn't seem to look right. Could you try again please?"
+        puts "well...that doesn't seem to look right. Could you try again please? ^_^"
         menu
     end
     def print_films
@@ -50,22 +50,26 @@ class CLI
         else
             title = selection
         end
-        movie_detail(title)
+        movie_detail(films)
     end
 
-    def movie_detail(title)
-        if title == "exit"
+    def movie_detail(films)
+        if films == "exit"
             goodbye
-        elsif title.class == Movies
+        elsif films.class == Movies
         puts ""
         puts ""
-        puts "-------------------------------------"
-        puts "Name: #{title.name}"
-        puts "Stats: #{title.info}"
-        puts "-------------------------------------"
+        puts "-------------------------------------".colorize(:light_blue)
+        puts "Original Title: #{films.original_title}"
+        puts "Name: #{films.title}"
+        puts "Description: #{films.description}"
+        puts "Release date: #{films.release_date}""
+        puts ""
+        puts "-------------------------------------".colorize(:light_blue)
         puts ""
         puts ""
         puts "enter y to see more movie or exit to exit"
+        menu
         else 
             invalid
         end

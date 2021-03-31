@@ -1,5 +1,5 @@
 class Movies
-    attr_accessor :title
+    attr_accessor :title,:description, :original_title, :release_date
     # , :original_title, :description, :producer, :release_date, :running_time
    
     @@all = []
@@ -19,7 +19,7 @@ class Movies
         @@all
     end
     def self.find_by_selection(films_title)
-        self.all.detect do |movie|
+        self.all.detect do |films|
             films.title == films_title
         end
     end
