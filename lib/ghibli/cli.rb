@@ -9,12 +9,15 @@ class CLI
         gets.strip
     end
     def greet(name)
+        puts ""
         puts "Wow... #{name}, what a nice name! Would you like to see some of Studio Ghibli's movies today? If so, kindly Enter y to see a list of movies otherwise enter exit to exit"
+        puts ""
         menu
     end
     def menu
         selection = user_input
         if selection == "y"
+            puts ""
             print_films
         elsif selection == "exit"
             goodbye
@@ -63,7 +66,8 @@ class CLI
         puts "Original Title: #{films.original_title}"
         puts "Name: #{films.title}"
         puts "Description: #{films.description}"
-        puts "Release date: #{films.release_date}""
+        puts "Release date: #{films.release_date}"
+        puts "How long: #{films.running_time} minutes"
         puts ""
         puts "-------------------------------------".colorize(:light_blue)
         puts ""
