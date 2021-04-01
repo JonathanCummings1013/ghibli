@@ -81,7 +81,7 @@ EOF
     def select_films
         puts "Enter name of movie you would like to learn more about please.".colorize(:red)
         puts ""
-        selection = user_input #put in movie.rb for the string
+        selection = user_input 
         if Movies.find_by_selection(selection)
         films = Movies.find_by_selection(selection)
         else
@@ -98,7 +98,7 @@ EOF
         puts ""
         puts "-------------------------------------".colorize(:red)
         puts "Original Title: #{films.original_title}".colorize(:yellow)
-        puts "Name: #{films.title}".colorize(:green)
+        puts "North American Title: #{films.title}".colorize(:green)
         puts "Description: #{films.description}".colorize(:blue)
         puts "Release date: #{films.release_date}".colorize(:red)
         puts "How long: #{films.running_time} minutes".colorize(:yellow)
