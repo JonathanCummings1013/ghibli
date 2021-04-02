@@ -85,7 +85,7 @@ EOF
         if Movies.find_by_selection(selection)
         films = Movies.find_by_selection(selection)
         else
-            title = selection
+            films = selection
         end
         movie_detail(films)
     end
