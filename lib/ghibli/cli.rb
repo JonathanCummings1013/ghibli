@@ -11,6 +11,7 @@ class CLI
                                                                                                                                    
 EOF
         puts "Welcome to Studio Ghibli Movie Finder! What is a name I could call you?".colorize(:light_blue) 
+        puts "                             ༼ ⁰o⁰；༽".colorize(:yellow)
         API.get_data
         input = user_input
         greet(input)
@@ -72,10 +73,14 @@ EOF
         puts "                 xoxo".colorize(:red)
     end
     def invalid 
-        puts "well...that doesn't seem to look right. Could you try again please? ^_^".colorize(:light_pink)
+        puts ""
+        puts "                            ut oh"
+        puts "                           (　´_ﾉ`)"
+        sleep (0.75)
+        puts "...that doesn't seem to look right. Could you try again please? ^_^".colorize(:light_pink)
         sleep (0.50)
         puts ""
-        puts "enter yes to see more movie or exit to exit".colorize(:light_pink)
+        puts "         enter yes to see more movie or exit to exit".colorize(:light_pink)
         menu
     end
     def print_films
@@ -87,7 +92,7 @@ EOF
     end
     def select_films
         puts "Enter name of movie you would like to learn more about please.".colorize(:red)
-        sleep (2)
+        sleep (0.50)
         puts ""
         selection = user_input 
         if Movies.find_by_selection(selection)
@@ -106,20 +111,20 @@ EOF
         puts ""
         puts "-------------------------------------".colorize(:red)
         puts "Original Title: #{films.original_title}".colorize(:yellow)
-        sleep (1)
+        sleep (0.50)
         puts "North American Title: #{films.title}".colorize(:green)
-        sleep (1)
+        sleep (0.50)
         puts "Description: #{films.description}".colorize(:blue)
-        sleep (1)
+        sleep (0.50)
         puts "Release date: #{films.release_date}".colorize(:red)
-        sleep (1)
+        sleep (0.50)
         puts "How long: #{films.running_time} minutes".colorize(:yellow)
-        sleep (1)
+        sleep (0.50)
         puts ""
         puts "-------------------------------------".colorize(:red)
         puts ""
         puts ""
-        sleep (1)
+        sleep (0.50)
         puts "enter yes to see more movie or exit to exit"
         menu
         else 
