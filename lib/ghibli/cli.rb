@@ -45,47 +45,6 @@ class CLI
         #enter exit to exit
         #invaild message
     end
-
-    def goodbye
-        puts "
-
-        ....▓▓▓▓
-        ..▓▓......▓
-        ..▓▓......▓▓..................▓▓▓▓
-        ..▓▓......▓▓..............▓▓......▓▓▓▓
-        ..▓▓....▓▓..............▓......▓▓......▓▓
-        ....▓▓....▓............▓....▓▓....▓▓▓....▓▓
-        ......▓▓....▓........▓....▓▓..........▓▓....▓
-        ........▓▓..▓▓....▓▓..▓▓................▓▓
-        ........▓▓......▓▓....▓▓
-        .......▓.................▓
-        .....▓.....................▓
-        ....▓......^..........<.....▓
-        ....▓............❤...... ...▓
-        ....▓........................▓
-        ......▓..........ٮ.........▓
-        ...........▓▓.........▓▓
-        ...............▓...
-                                                                                                                                 
-".colorize(:green)
-        puts "        Thank you for visiting us!".colorize(:red)
-        sleep (0.50)
-        puts "           ＼(´▽｀*)(*´▽｀)/".colorize(:yellow)
-        puts "            come back soon".colorize(:green)
-        sleep (0.50)
-        puts "                 ✿ ✿ ✿ ✿".colorize(:blue)
-    end
-    def invalid 
-        puts ""
-        puts "                            ut oh".colorize(:yellow)
-        puts "                           (　´_ﾉ`)".colorize(:yellow)
-        sleep (0.75)
-        puts "...that doesn't seem to look right. Could you try again please? ^_^".colorize(:yellow)
-        sleep (0.50)
-        puts ""
-        puts "         enter yes to see more movie or exit to exit".colorize(:yellow)
-        menu
-    end
     def print_films
         # binding.pry
        Movies.all.each.with_index(1) do |films, index|
@@ -97,7 +56,7 @@ class CLI
         puts "Enter name of movie you would like to learn more about please.".colorize(:red)
         sleep (0.50)
         puts ""
-        selection = user_input 
+        selection = user_input.downcase 
         if Movies.find_by_selection(selection)
         films = Movies.find_by_selection(selection)
         else
@@ -134,5 +93,51 @@ class CLI
             invalid
         end
     end
+
+    def invalid 
+        puts ""
+        puts "                            ut oh"
+        puts "                           (　´_ﾉ`)".colorize(:yellow)
+        sleep (0.75)
+        puts "...that doesn't seem to look right. Could you try again please? ^_^".colorize(:yellow)
+        sleep (0.50)
+        puts ""
+        puts "         enter yes to see more movie or exit to exit".colorize(:yellow)
+        menu
+    end    
+
+    def goodbye
+        puts "
+
+        ....▓▓▓▓
+        ..▓▓......▓
+        ..▓▓......▓▓..................▓▓▓▓
+        ..▓▓......▓▓..............▓▓......▓▓▓▓
+        ..▓▓....▓▓..............▓......▓▓......▓▓
+        ....▓▓....▓............▓....▓▓....▓▓▓....▓▓
+        ......▓▓....▓........▓....▓▓..........▓▓....▓
+        ........▓▓..▓▓....▓▓..▓▓................▓▓
+        ........▓▓......▓▓....▓▓
+        .......▓.................▓
+        .....▓.....................▓
+        ....▓......^..........<.....▓
+        ....▓............❤...... ...▓
+        ....▓........................▓
+        ......▓..........ٮ.........▓
+        ...........▓▓.........▓▓
+        ...............▓...
+                                                                                                                                 
+".colorize(:green)
+        puts "        Thank you for visiting us!".colorize(:red)
+        sleep (0.50)
+        puts "           ＼(´▽｀*)(*´▽｀)/".colorize(:yellow)
+        puts "            come back soon".colorize(:green)
+        sleep (0.50)
+        puts "                 ✿ ✿ ✿ ✿".colorize(:blue)
+    end
+
+
+
+
 end
 # People: #{films.people}
