@@ -29,7 +29,7 @@ class CLI
         menu
     end
     def menu
-        selection = user_input
+        selection = user_input.downcase
         if selection == "yes"
             puts ""
             sleep (1)
