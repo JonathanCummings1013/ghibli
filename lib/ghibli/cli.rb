@@ -102,7 +102,7 @@ class CLI
         puts "...that doesn't seem to look right. Could you try again please? ^_^".colorize(:yellow)
         sleep (0.50)
         puts ""
-        puts "         enter yes to see more movie or exit to exit".colorize(:yellow)
+        puts "         enter yes to see more movies or exit to exit".colorize(:yellow)
         menu
     end    
 
