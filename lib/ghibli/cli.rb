@@ -24,11 +24,7 @@ class CLI
     def greet(name)
         puts ""
         sleep (0.50)
-        greeting = "Wow... #{name}, what a nice name! Would you like to see some of Studio Ghibli's movies today? If so, kindly enter yes to see a list of movies otherwise enter exit to exit".colorize(:light_blue)
-        greeting.split.each do |word|
-            print "#{word} "
-            sleep 0.4
-          end
+        puts "Wow... #{name}, what a nice name! Would you like to see some of Studio Ghibli's movies today? If so, kindly enter yes to see a list of movies otherwise enter exit to exit".colorize(:light_blue)
         puts ""
         menu
     end
