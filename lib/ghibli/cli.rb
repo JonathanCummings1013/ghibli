@@ -22,7 +22,8 @@ class CLI
     def greet(name)
         puts ""
         sleep (0.50)
-        puts "Wow... #{name}, what a nice name! Would you like to see some of Studio Ghibli's movies today? If so, kindly enter yes to see a list of movies otherwise enter exit to exit".colorize(:light_blue)
+        puts "          Wow... #{name}, what a nice name! Would you like to see some of Studio Ghibli's movies today?".colorize(:light_blue)
+        puts "            If so, kindly enter yes to see a list of movies otherwise enter exit to exit".colorize(:light_blue)
         puts ""
         menu
     end
