@@ -143,4 +143,3 @@ class CLI
 
 
 end
-# People: #{films.people}
