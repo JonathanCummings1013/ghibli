@@ -4,15 +4,16 @@ class CLI
     def start
         puts "
         
-          __     ______    __ __    ____      __      ___           ___     __  __    __    ____     __       __        
-         (( \    | || |    || ||    || \\     ||     // \\         // \\    ||  ||    ||    || ))    ||       ||        
-          \\       ||      || ||    ||  ))    ||    ((   ))       (( ___    ||==||    ||    ||=)     ||       ||        
-         \_))      ||      \\_//    ||_//     ||     \\_//         \\_||    ||  ||    ||    ||_))    ||__|    ||   
-          
-                                                                                                                                                                                                                                                         
+       .|'''|    ||                 ||`                   .|'''''| '||          '||     '||`                
+ |     ||        ||                 ||   ''               || .      ||      ''   ||      ||   ''      |     
+-|-    `|'''|, ''||''  '||  ||` .|''||   ||  .|''|,       || |''||  ||''|,  ||   ||''|,  ||   ||     -|-    
+ |      .   ||   ||     ||  ||  ||  ||   ||  ||  ||       ||    ||  ||  ||  ||   ||  ||  ||   ||      |     
+        |...|'   `|..'  `|..'|. `|..||. .||. `|..|'       `|....|' .||  || .||. .||..|' .||. .||.           
+                                                                                                              
+                                                                                                                                                                                                                                                                                                                                                      
         ".colorize(:yellow)                                                                                                                            
-        puts "Welcome to Studio Ghibli Movie Finder! What is a name I could call you?".colorize(:light_blue) 
-        puts "                             ༼ ⁰o⁰；༽".colorize(:yellow)
+        puts "              Welcome to Studio Ghibli Movie Finder! What is a name I could call you?".colorize(:light_blue) 
+        puts "                                            ༼ ⁰o⁰；༽".colorize(:yellow)
         API.get_data
         input = user_input
         greet(input)
@@ -76,13 +77,13 @@ class CLI
     end
     def invalid 
         puts ""
-        puts "                            ut oh"
-        puts "                           (　´_ﾉ`)"
+        puts "                            ut oh".colorize(:yellow)
+        puts "                           (　´_ﾉ`)".colorize(:yellow)
         sleep (0.75)
-        puts "...that doesn't seem to look right. Could you try again please? ^_^".colorize(:light_pink)
+        puts "...that doesn't seem to look right. Could you try again please? ^_^".colorize(:yellow)
         sleep (0.50)
         puts ""
-        puts "         enter yes to see more movie or exit to exit".colorize(:light_pink)
+        puts "         enter yes to see more movie or exit to exit".colorize(:yellow)
         menu
     end
     def print_films
