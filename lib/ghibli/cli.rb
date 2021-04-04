@@ -109,7 +109,7 @@ EOF
         elsif films.class == Movies
         puts ""
         puts ""
-        puts "-------------------------------------".colorize(:red)
+        puts "☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆".colorize(:red)
         puts "Original Title: #{films.original_title}".colorize(:yellow)
         sleep (0.50)
         puts "North American Title: #{films.title}".colorize(:green)
@@ -121,7 +121,7 @@ EOF
         puts "How long: #{films.running_time} minutes".colorize(:yellow)
         sleep (0.50)
         puts ""
-        puts "-------------------------------------".colorize(:red)
+        puts "☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆".colorize(:red)
         puts ""
         puts ""
         sleep (0.50)
