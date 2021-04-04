@@ -69,6 +69,7 @@ class CLI
         if films == "exit"
             goodbye
         elsif films.class == Movies
+        puts ""
         puts "Good choice!".colorize(:yellow)
         puts ""
         sleep (1.2)
