@@ -2,14 +2,15 @@
 
 class CLI 
     def start
-        puts <<-'EOF'
-                 __                     __                         
-        _|_ \|/ (_ _|_      _| o  _    /__ |_  o |_  | o \|/   _|_ 
-         |  /|\ __) |_ |_| (_| | (_)   \_| | | | |_) | | /|\    |  
-                                                                   
-                                                
-                                                                                                                                   
-EOF
+        puts "
+        
+          __     ______    __ __    ____      __      ___           ___     __  __    __    ____     __       __        
+         (( \    | || |    || ||    || \\     ||     // \\         // \\    ||  ||    ||    || ))    ||       ||        
+          \\       ||      || ||    ||  ))    ||    ((   ))       (( ___    ||==||    ||    ||=)     ||       ||        
+         \_))      ||      \\_//    ||_//     ||     \\_//         \\_||    ||  ||    ||    ||_))    ||__|    ||   
+          
+                                                                                                                                                                                                                                                         
+        ".colorize(:yellow)                                                                                                                            
         puts "Welcome to Studio Ghibli Movie Finder! What is a name I could call you?".colorize(:light_blue) 
         puts "                             ༼ ⁰o⁰；༽".colorize(:yellow)
         API.get_data
@@ -45,7 +46,7 @@ EOF
     end
 
     def goodbye
-        puts <<-'EOF'
+        puts "
 
         ....▓▓▓▓
         ..▓▓......▓
@@ -65,12 +66,13 @@ EOF
         ...........▓▓.........▓▓
         ...............▓...
                                                                                                                                  
-EOF
+".colorize(:green)
         puts "        Thank you for visiting us!".colorize(:red)
         sleep (0.50)
-        puts "            come back soon".colorize(:red)
+        puts "           ＼(´▽｀*)(*´▽｀)/".colorize(:yellow)
+        puts "            come back soon".colorize(:green)
         sleep (0.50)
-        puts "                 xoxo".colorize(:red)
+        puts "                 ✿ ✿ ✿ ✿".colorize(:blue)
     end
     def invalid 
         puts ""
