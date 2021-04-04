@@ -1,5 +1,3 @@
-#No case sensitivty 
-
 class CLI 
     def start
         puts "
