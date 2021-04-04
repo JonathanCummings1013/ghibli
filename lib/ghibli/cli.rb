@@ -69,7 +69,9 @@ class CLI
         if films == "exit"
             goodbye
         elsif films.class == Movies
+        puts "Good choice!".colorize(:yellow)
         puts ""
+        sleep (1.2)
         puts ""
         puts "☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆ ~ ☆".colorize(:red)
         puts "Original Title: #{films.original_title}".colorize(:yellow)
@@ -87,7 +89,7 @@ class CLI
         puts ""
         puts ""
         sleep (0.50)
-        puts "enter yes to see more movie or exit to exit"
+        puts "enter yes to see more movie or exit to exit".colorize(:yellow)
         menu
         else 
             invalid
