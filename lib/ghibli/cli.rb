@@ -37,7 +37,7 @@ class CLI
             goodbye
             #exit 
         else
-            invalid
+            select_films(selection)
             # invaild message, let them keep chosing 
         end
         #enter y print out movies
@@ -46,23 +46,23 @@ class CLI
     end
     def print_films
         # binding.pry
-       Movies.all.each.with_index(1) do |films, index|
-        puts "#{index}. #{films.title}".colorize(:green)
-       end
-       select_films
-    end
-    def select_films
-        puts "Enter name of movie you would like to learn more about please.".colorize(:red)
-        sleep (0.50)
-        puts ""
-        selection = user_input.downcase 
-        if Movies.find_by_selection(selection)
-        films = Movies.find_by_selection(selection)
-        else
-            films = selection
+        Movies.all.each.with_index(1) do |films, index|
+            puts "#{index}. #{films.title}".colorize(:green)
+           end
+           puts "Enter name of movie you would like to learn more about please.".colorize(:red)
+           puts ""
+           selection = user_input
+           select_films(selection)
         end
-        movie_detail(films)
-    end
+        def select_films(input)
+            selection = input
+            if Movies.find_by_selection(selection)
+            films = Movies.find_by_selection(selection)
+            else
+                title = selection
+            end
+            movie_detail(films)
+        end
 
     def movie_detail(films)
         if films == "exit"
@@ -102,10 +102,8 @@ class CLI
         puts "                            ut oh"
         puts "                           (　´_ﾉ`)".colorize(:yellow)
         sleep (0.75)
-        puts "...that doesn't seem to look right. Could you try again please? ^_^".colorize(:yellow)
-        sleep (0.50)
+        puts "...that doesn't seem to look right. Could you try again please? ^_^".colorize(:yellow) 
         puts ""
-        puts "         enter yes to see more movies or exit to exit".colorize(:yellow)
         menu
     end    
 
